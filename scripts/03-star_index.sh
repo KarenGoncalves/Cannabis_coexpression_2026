@@ -102,11 +102,11 @@ for RL in "${READ_LENGTHS[@]}"; do
   fi
 
   OVERHANG=$((RL - 1))
-  OUTDIR="${GENOME_DIR}_${RL}"
+  OUTDIR="${GENOME_DIR}/Index_${RL}"
 
   echo "==> Building STAR index: read length ${RL} (sjdbOverhang=${OVERHANG})"
   echo "    Output dir: ${OUTDIR}"
-  mkdir -p ${OUTDIR}
+  mkdir -p  ${OUTDIR}
 
   STAR \
     --runThreadN ${THREADS} \
